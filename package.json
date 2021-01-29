@@ -1,0 +1,138 @@
+{
+  "name": "elastic-client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/icons": "^4.2.1",
+    "@babel/core": "7.9.0",
+    "@reduxjs/toolkit": "^1.1.0",
+    "@svgr/webpack": "4.3.3",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@typescript-eslint/eslint-plugin": "^2.10.0",
+    "@typescript-eslint/parser": "^2.10.0",
+    "antd": "^4.4.2",
+    "array-move": "^3.0.1",
+    "axios": "^0.19.2",
+    "babel-eslint": "10.1.0",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "8.1.0",
+    "babel-plugin-named-asset-import": "^0.3.6",
+    "babel-preset-react-app": "^9.1.2",
+    "camelcase": "^5.3.1",
+    "case-sensitive-paths-webpack-plugin": "2.3.0",
+    "css-loader": "3.4.2",
+    "dayjs": "^1.8.29",
+    "dotenv": "8.2.0",
+    "dotenv-expand": "5.1.0",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-loader": "3.0.3",
+    "eslint-plugin-flowtype": "4.6.0",
+    "file-loader": "4.3.0",
+    "file-saver": "^2.0.2",
+    "fs-extra": "^8.1.0",
+    "html-to-text": "^5.1.1",
+    "html-webpack-plugin": "4.0.0-beta.11",
+    "identity-obj-proxy": "3.0.0",
+    "jalaliday": "^2.3.0",
+    "jest": "24.9.0",
+    "jest-environment-jsdom-fourteen": "1.0.1",
+    "jest-resolve": "24.9.0",
+    "jest-watch-typeahead": "0.4.2",
+    "join-url": "^2.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.19",
+    "mini-css-extract-plugin": "0.9.0",
+    "optimize-css-assets-webpack-plugin": "5.0.3",
+    "pnp-webpack-plugin": "1.6.4",
+    "postcss-flexbugs-fixes": "4.1.0",
+    "postcss-loader": "3.0.0",
+    "postcss-normalize": "8.0.1",
+    "postcss-preset-env": "6.7.0",
+    "postcss-safe-parser": "4.0.1",
+    "qs": "^6.9.4",
+    "react": "^16.13.1",
+    "react-app-polyfill": "^1.0.6",
+    "react-dev-utils": "^10.2.1",
+    "react-dom": "^16.13.1",
+    "react-froala-wysiwyg": "^3.2.1-1",
+    "react-redux": "^7.1.3",
+    "react-router-dom": "^5.2.0",
+    "react-sortable-hoc": "^1.11.0",
+    "resolve": "1.15.0",
+    "resolve-url-loader": "3.1.1",
+    "sass-loader": "8.0.2",
+    "semver": "6.3.0",
+    "stringz": "^2.1.0",
+    "style-loader": "0.23.1",
+    "terser-webpack-plugin": "2.3.5",
+    "ts-pnp": "1.1.6",
+    "url-join": "^4.0.1",
+    "url-loader": "2.3.0",
+    "webpack": "4.42.0",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-manifest-plugin": "2.2.0",
+    "workbox-webpack-plugin": "4.3.1"
+  },
+  "scripts": {
+    "start": "node scripts/start.js",
+    "build": "node scripts/build.js",
+    "test": "node scripts/test.js",
+    "prettier": "prettier --write ./src",
+    "lint": "npx eslint ./src",
+    "lint:fix": "npx eslint ./src --fix"
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "rules": {
+      "react-hooks/exhaustive-deps": 0
+    }
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "singleQuote": true,
+    "tabWidth": 2
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ],
+    "plugins": [
+      [
+        "module-resolver",
+        {
+          "root": [
+            "./src"
+          ]
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "antd-dayjs-webpack-plugin": "^1.0.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.7",
+    "less": "^3.11.3",
+    "less-loader": "^6.2.0",
+    "node-sass": "^4.14.1",
+    "prettier": "2.0.5"
+  }
+}

@@ -1,0 +1,291 @@
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: bold;
+  src: url('./fonts/eot/iranyekanwebbold.eot');
+  src: url('./fonts/eot/iranyekanwebbold.eot?#iefix')
+      format('embedded-opentype'),
+    url('./fonts/woff/iranyekanwebbold.woff') format('woff'),
+    url('./fonts/ttf/iranyekanwebbold.ttf') format('truetype');
+}
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 100;
+  src: url('./fonts/eot/iranyekanwebthin.eot');
+  src: url('./fonts/eot/iranyekanwebthin.eot?#iefix')
+      format('embedded-opentype'),
+    url('./fonts/woff/iranyekanwebthin.woff') format('woff'),
+    url('./fonts/ttf/iranyekanwebthin.ttf') format('truetype');
+}
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 300;
+  src: url('./fonts/eot/iranyekanweblight.eot');
+  src: url('./fonts/eot/iranyekanweblight.eot?#iefix')
+      format('embedded-opentype'),
+    url('./fonts/woff/iranyekanweblight.woff') format('woff'),
+    url('./fonts/ttf/iranyekanweblight.ttf') format('truetype');
+}
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/eot/iranyekanwebregular.eot');
+  src: url('./fonts/eot/iranyekanwebregular.eot?#iefix')
+      format('embedded-opentype'),
+    url('./fonts/woff/iranyekanwebregular.woff') format('woff'),
+    url('./fonts/ttf/iranyekanwebregular.ttf') format('truetype');
+}
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 500;
+  src: url('./fonts/eot/iranyekanwebmedium.eot');
+  src: url('./fonts/eot/iranyekanwebmedium.eot?#iefix')
+      format('embedded-opentype'),
+    url('./fonts/woff/iranyekanwebmedium.woff') format('woff'),
+    url('./fonts/ttf/iranyekanwebmedium.ttf') format('truetype');
+}
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 800;
+  src: url('./fonts/eot/iranyekanwebextrabold.eot');
+  src: url('./fonts/eot/iranyekanwebextrabold.eot?#iefix')
+      format('embedded-opentype'),
+    url('./fonts/woff/iranyekanwebextrabold.woff') format('woff'),
+    url('./fonts/ttf/iranyekanwebextrabold.ttf') format('truetype');
+}
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 900;
+  src: url('./fonts/eot/iranyekanwebblack.eot');
+  src: url('./fonts/eot/iranyekanwebblack.eot?#iefix')
+      format('embedded-opentype'),
+    url('./fonts/woff/iranyekanwebblack.woff') format('woff'),
+    url('./fonts/ttf/iranyekanwebblack.ttf') format('truetype');
+}
+@font-face {
+  font-family: iranyekan;
+  font-style: normal;
+  font-weight: 950;
+  src: url('./fonts/eot/iranyekanwebextrablack.eot');
+  src: url('./fonts/eot/iranyekanwebextrablack.eot?#iefix')
+      format('embedded-opentype'),
+    url('./fonts/woff/iranyekanwebextrablack.woff') format('woff'),
+    url('./fonts/ttf/iranyekanwebextrablack.ttf') format('truetype');
+}
+.logo {
+  margin: 8px;
+  margin-bottom: 24px;
+}
+.logo img {
+  height: 100%;
+  width: 100%;
+  max-height: 48px;
+}
+
+.ant-page-header {
+  margin-bottom: 16px;
+  padding: 12px;
+}
+
+.layout {
+  min-height: 100vh;
+}
+
+.stats-redis-sync-asset .ant-card-meta {
+  text-align: left;
+  margin-top: 8px;
+}
+.stats-redis-sync-asset .success-stat .ant-statistic-title,
+.stats-redis-sync-asset .success-stat .ant-statistic-content-value {
+  color: green;
+}
+.stats-redis-sync-asset .failed-stat .ant-statistic-title,
+.stats-redis-sync-asset .failed-stat .ant-statistic-content-value {
+  color: red;
+}
+.stats-redis-sync-asset .stats-show-errors {
+  padding-right: 0;
+  color: rgba(0, 0, 0, 0.45);
+}
+.stats-redis-sync-asset .stats-show-errors:hover {
+  color: rgba(0, 0, 0, 0.65);
+}
+.stats-redis-sync-asset .ant-card-actions span {
+  cursor: default;
+}
+.stats-redis-sync-asset .ant-card-actions span:hover {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}
+
+.login-form {
+  height: calc(100vh - 75px);
+  background: #f7f9fc !important;
+}
+
+.bambo {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.09) !important;
+  border: 1px solid #eaedf2;
+  border-radius: 0.3125rem;
+}
+
+.table-record-title {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.table-record-sub {
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 12px;
+}
+
+.table-tag {
+  display: block;
+  width: 100px;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.table-tag-horizontal {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-left: 12px;
+}
+
+.debug-button {
+  background-color: #02c780;
+  position: fixed;
+  left: -165px;
+  width: 200px;
+  height: 76px;
+  cursor: pointer;
+  text-align: center;
+  bottom: 100px;
+  padding: 8px 36px;
+  font-size: 14px;
+  color: #fff;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  font-weight: 100;
+  transition: left ease-in 1s;
+}
+.debug-button .anticon {
+  margin-left: 4px;
+  vertical-align: middle;
+  font-size: 14px;
+}
+.debug-button .debug-button-sub {
+  font-size: 13px;
+  margin-top: 20px;
+}
+.debug-button .debug-button-title {
+  transform: rotate(90deg);
+  position: absolute;
+  right: 15px;
+  top: 0;
+  bottom: 0;
+}
+.debug-button:hover {
+  left: 0;
+}
+
+.ant-table-row:hover {
+  cursor: pointer;
+}
+
+.ant-card-bordered {
+  border-color: #eaedf2;
+}
+
+.ant-tag,
+.ant-tag a,
+.ant-tag a:hover {
+  background: transparent !important;
+  width: 100px;
+  text-align: center !important;
+}
+
+.user-tag {
+  width: 80px;
+}
+
+.shortview-header-desc {
+  margin: 0;
+}
+
+.shortview-card {
+  margin-bottom: 8px;
+}
+.shortview-card .ant-card-body {
+  padding: 0;
+}
+
+.anticon {
+  vertical-align: -0.2em;
+}
+
+.ant-form-rtl .ant-form-item-label {
+  text-align: right;
+}
+
+.ant-form-item-control-input-content .ant-picker {
+  width: 100%;
+}
+
+.ant-page-header {
+  background: #fafafa;
+  padding: 8px;
+}
+.ant-page-header .ant-page-header-heading-title {
+  font-size: 16px;
+  font-weight: 400;
+  margin-right: 12px;
+}
+
+.shortview-actions-container {
+  position: fixed;
+  top: 28px;
+  left: 28px;
+}
+
+.table-color-column .table-color-column-box {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-left: 4px;
+}
+
+.parents-packages-tag {
+  position: absolute;
+  top: 8px;
+  left: 0;
+}
+
+.parents-packages-title p {
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 12px;
+}
+
+.parents-packages-card .ant-card-body {
+  padding-bottom: 0;
+}
+
+.parenst-packages-extra-descriptions {
+  background: #fafafa;
+  padding: 4px;
+  text-align: center;
+  margin-top: 12px;
+}

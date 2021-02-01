@@ -1,20 +1,33 @@
 import React, { useEffect, useState } from 'react';
-import { Drawer, Button, Row, List, Badge, Col, message } from 'antd';
+import { Drawer, Button, Row, List, Col, message, Typography, Divider, Card, Space } from 'antd';
 import ShortViewHeader from 'components/ShortViewHeader';
 import { MediumSquareFilled } from '@ant-design/icons';
 import FieldStatus from "./FieldStatus";
-import api from "../../api/models";
+import api from "../../api/api";
 
+const { Text } = Typography;
 export default function ModelDetail({ setVisible, visible, selected }) {
-    useEffect(() => {
-
-    }, [selected]);
 
     async function index(field) {
         const res = await api.index(selected.modelName, field)
         console.log({ res })
         if (res) {
             message.success('done');
+            console.log({ field })
+            console.log('selected.fields', selected.fields)
+            const i = selected.fields.findIndex(({ fieldName }) => fieldName===field)
+            console.log({ i })
+            const newFields = selected.fields
+            newFields[i].indexed = true
+            selected.fields = newFields
+        }
+    }
+
+    async function deleteIndex() {
+        const res = await api.deleteIndex(selected.modelName)
+        console.log({ res })
+        if (res) {
+            message.success('deleted');
         }
     }
 
@@ -32,22 +45,34 @@ export default function ModelDetail({ setVisible, visible, selected }) {
                             icon={
                                 <MediumSquareFilled/>
                             }
-                            title={<Badge.Ribbon text={selected.modelName}/>}
                     />
-                    <List
-                            size="large"
-                            header={<div className={'ant-card-hoverable'}> Model fields</div>}
-                            bordered
-                            dataSource={selected.fields}
-                            renderItem={field =>
-                                    <List.Item>{field.fieldName} =>
-                                        <Row>
-                                            <Col span={8}>{field.value.type}</Col>
-                                            <Col span={8}> <FieldStatus status={field.indexed}/></Col>
-                                            <Col span={8}> <Button type="primary" visible={(!field.indexed).toString()}
-                                                                   onClick={() => index(field.fieldName)}>index</Button></Col>
-                                        </Row>
-                                    </List.Item>}
+                    <Card title=" حذف ایندکس">
+                        <Button type="primary" onClick={() => deleteIndex()}> حذف ایندکس</Button>
+                        <span>
+                          حذف ایندکس تمام اطلاعات از ایندکس در الستیک حذف میشود
+                      </span>
+                    </Card>
+                    <Divider direction={"vertical"}/>
+                    <List grid={{ column: 1 }}
+                          size="large"
+                          bordered
+                          title={<Text
+                                  type="success">{selected.modelName} فیلد های مدل </Text>}
+                          dataSource={selected.fields}
+                          renderItem={field =>
+                                  <List.Item>
+                                      <Row>
+                                          <Col span={12}>{field.fieldName}:{field.value.type}</Col>
+                                          <Col span={12}>
+                                              {!field.indexed ?
+                                                      <Button type="primary"
+                                                              onClick={() => index(field.fieldName)}>index</Button>
+                                                      :
+                                                      <FieldStatus status={field.indexed}/>
+                                              }
+                                          </Col>
+                                      </Row>
+                                  </List.Item>}
                     />
                 </>
             </Drawer>

@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { PageHeader, Card } from 'antd';
+import React, { useContext, useEffect, useState } from 'react';
+import { Card } from 'antd';
 import ModelDetail from './ModelDetail';
-import api from '../../api/models';
+import api from '../../api/api';
+import Context from '../../app/context';
 
 export default function Models() {
     const [visible, setVisible] = useState(false);
     const [selected, setSelected] = useState({});
-    const [models, setModels] = useState([]);
+    const { models, setModels} = useContext(Context);
 
 
     useEffect(() => {
@@ -14,7 +15,6 @@ export default function Models() {
             const { body } = await api.getModels();
             setModels(body)
         }
-
         fetchData();
     }, [])
 
@@ -32,8 +32,7 @@ export default function Models() {
 
     return (
             <>
-                <PageHeader title=" ایندکس ها"/>
-                <Card title="indexes">
+                <Card title=" مدل ها">
                     <CardList data={models}/>
                 </Card>,
 

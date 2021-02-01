@@ -610,10 +610,20 @@ $primary-color: #02c780;
   padding: 7px;
 }
 
+.spanObj {
+  display: block;
+  border: solid white 1px;
+  padding: 5px;
+}
+
 .gridStyle {
   background-color: $primary-color;
   color: white;
   font-size: 15px;
   width: 25vw;
   text-align: center;
+}
+
+.blue {
+  background-color: #331da7
 }

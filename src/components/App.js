@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import Home from './Home';
 import { Route } from "react-router-dom";
+import Context from "../app/context";
+import context from "../app/context";
 
 (async function () {
     // we need less for antd global less variable and them customization.
@@ -14,8 +16,8 @@ import { Route } from "react-router-dom";
 function App() {
     return (
             <>
-                <Route path="/">
-                    <Home/>
+                <Route path="/" >
+                        <Home/>
                 </Route>
             </>
     );

@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Layout } from 'antd';
 import Sidebar from './Sidebar';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import router from 'app/router';
+import router from '../app/router';
 
 export default function Home() {
-    const [marginRight, setMarginRight] = useState(200);
-
+    const [marginRight, setMarginRight] = useState(100);
     return (
             <>
                 <Layout className="layout">
@@ -47,5 +46,5 @@ export default function Home() {
                     </Layout>
                 </Layout>
             </>
-    );
+    )
 }

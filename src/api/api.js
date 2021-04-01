@@ -5,7 +5,14 @@ export default {
     async getModels() {
         const { data } = await client({
             method: 'get',
-            url: '/tables/all',
+            url: '/tables',
+        });
+        return data
+    },
+    async getModelByModelName(modelName) {
+        const { data } = await client({
+            method: 'get',
+            url: `/tables/${modelName}`,
         });
         return data
     },

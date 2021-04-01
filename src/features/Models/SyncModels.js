@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { PageHeader, Card, Button, message, Row } from 'antd';
+import { PageHeader, Card, Button, message, Divider } from 'antd';
 import api from '../../api/api';
 import Context from "../../app/context";
 
@@ -20,9 +20,10 @@ export default function Models() {
             <>
                 <PageHeader title=" مدیریت مدل ها"/>
                 <Card title=" همگام سازی مدل ها با دیتابیس ها">
-                    <Button type="primary" onClick={() => sync()}> sync</Button>
-                    <span> این عملیات به دیتابیس متصل شده و مدل ها را میگیرد. این عمل تنها یکبار باید انجام شود و تکرار
-                        ان باعث حذف اطلاعات قبلی میشود ولی تاثیری در مدل های الستیک ندارد</span>
+                    <Divider orientation="right">
+                    <Button type="primary" onClick={() => sync()}>  همگام سازی</Button>
+                    </Divider>
+                    <span> این عملیات به دیتابیس اصلی متصل شده و مدل ها را میگیرد. این عمل  باعث میشود که لیست فیلد های همه مدل ها و نوع ان ها در دیتابیس محلی مونگودیبی اپدیت شود ولی تاثیری در مدل های الستیک ندارد</span>
                 </Card>
             </>
     );

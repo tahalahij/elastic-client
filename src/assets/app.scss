@@ -441,12 +441,12 @@ $primary-color: #02c780;
   .relation-card-side {
     position: absolute;
     right: 1px;
-    top: 0px;
+    top: 0;
     bottom: 0;
     width: 16px;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
-    box-shadow: 1px 0px 2px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 0 2px 0 rgba(0, 0, 0, 0.2);
   }
 
   .relation-card-side-red {
@@ -625,5 +625,5 @@ $primary-color: #02c780;
 }
 
 .blue {
-  background-color: #331da7
+  background-color: darkorange
 }

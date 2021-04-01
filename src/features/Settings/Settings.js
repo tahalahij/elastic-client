@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, PageHeader, Card, Button, message } from 'antd';
+import { Row, Col, PageHeader, Card, Button, message, Divider } from 'antd';
 import api from "../../api/api";
 
 export default function Settings() {
@@ -17,7 +17,9 @@ export default function Settings() {
                     <Col span={24}>
                         <PageHeader title=" تنظیمات"/>
                         <Card title="فعال سازی صف">
-                            <Button type="primary" onClick={() => startRabbit()}> Activate RabbitMQ</Button>
+                            <Divider orientation="right">
+                                <Button type="primary" onClick={() => startRabbit()}> RabbitMQ فعال سازی </Button>
+                            </Divider>
                             <span> صف پیام ها                                                                                                                    را فعال میکند که باعث میشود پیام های ارسالی از اپ اصلی دریافت شوند</span>
                         </Card>
                     </Col>

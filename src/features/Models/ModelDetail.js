@@ -30,6 +30,14 @@ export default function ModelDetail({ setVisible, visible, selected }) {
         }
     }
 
+    async function importData() {
+        const res = await api.importDataFromDbAndStoreInElastic(model.modelName)
+        console.log({ import: res })
+        if (res) {
+            message.success('deleted');
+        }
+    }
+
     return (
             <Drawer
                     width={576}
@@ -45,9 +53,19 @@ export default function ModelDetail({ setVisible, visible, selected }) {
                                 <MediumSquareFilled/>
                             }
                     />
+                    <Card title=" بارگذاری ایندکس">
+                        <Divider orientation="right">
+                            <Button type="primary" onClick={() => importData()}> بارگذاری ایندکس </Button>
+                        </Divider>
+                        <span>
+                           بارگذاری ایندکس تمام اطلاعات این مدل را از دیتابیس   پروداکشن خوانده و در الستیک ایندکس میکند.
+                            دیدن اسم این مدل در اینجا به این معنی است که همگام سازی صدا زده شده و سیستم اسکیمای این مدل را میشناسد
+                            اما به این معنی نیست که دیتاها در الستیک بارگذاری شده اند
+                      </span>
+                    </Card>
                     <Card title=" حذف ایندکس">
                         <Divider orientation="right">
-                        <Button type="primary" onClick={() => deleteIndex()}> حذف ایندکس</Button>
+                            <Button type="primary" onClick={() => deleteIndex()}> حذف ایندکس</Button>
                         </Divider>
                         <span>
                            حذف ایندکس تمام اطلاعات از ایندکس در الستیک حذف میشود. اطلاعات در مورد اینکه چه فیلدی از هر مدل باید ایندکس شود در دیتابیس محلی باقی می ماند

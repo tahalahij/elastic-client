@@ -9,6 +9,13 @@ export default {
         });
         return data
     },
+    async getElasticIndexes() { // TODO to be used to show all indexed available in elastic in search page
+        const { data } = await client({
+            method: 'get',
+            url: '/tables/elastic/indexes',
+        });
+        return data
+    },
     async getModelByModelName(modelName) {
         const { data } = await client({
             method: 'get',
@@ -37,6 +44,13 @@ export default {
             method: 'post',
             url: '/tables/index',
             data: { model, field }
+        });
+        return data
+    },
+    async importDataFromDbAndStoreInElastic(model) {
+        const { data } = await client({
+            method: 'get',
+            url: `/import/${model}`,
         });
         return data
     },
